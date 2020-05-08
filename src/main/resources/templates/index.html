@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>start checkin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<br>
+<h1>start checkin </h1>
+<body>
+
+<form th:action="@{/startCheckIn}" method="post" th:object="${id}">
+    <div class="col-md-4 mb-3">
+        <label for="validationDefault01">Enter your ReservationID</label>
+        <input type="text" class="form-control" id="validationDefault01" name="id" placeholder="enter the flightID"   th:field="*{id}">
+
+    </div>
+    <div class="custom-modal-footer modal-footer">
+
+        <button type="submit" class="btn btn-primary">Start checkin</button>
+    </div>
+</form>
+
+
+
+
+</body>
+</html>
+
